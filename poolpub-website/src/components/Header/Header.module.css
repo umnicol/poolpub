@@ -1,0 +1,21 @@
+.header {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center calc(100% - -250px);
+}
+
+.titleContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.h1 {
+    text-transform: uppercase;
+    font-size: 64px;
+}
