@@ -1,0 +1,46 @@
+.sectionContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+
+  .sectionTitle {
+    width: 55%;
+    padding-right: 20px;
+    position: relative;
+  }
+  
+  .sectionTitle h2::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 30%;
+    height: 3px;
+    background-color:#D79D3B;
+  }
+  
+  
+  .sectionText {
+    width: 45%;
+  }
+
+  .h2 {
+    text-transform: uppercase;
+    font-size: 55px;
+    font-weight: 500;
+  }
+
+  .h4 {
+    text-transform: uppercase;
+    color: #D79D3B;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .p {
+    font-weight: 200;
+  }

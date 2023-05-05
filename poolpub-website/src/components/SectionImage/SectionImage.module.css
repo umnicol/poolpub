@@ -1,0 +1,41 @@
+.sectionContainer {
+  display: flex;
+  flex-direction: row;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  margin-left: 200px;
+  margin-right: 200px;
+  justify-content: space-between;
+} 
+
+.sectionImage {
+  width: 30%; /*change depending on the pic */
+  padding-left: 20px;
+  position: relative;
+}
+
+.sectionText {
+  width: 55%;
+} 
+
+.h3 {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+.h3::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 56%;
+  height: 3px;
+  background-color: #D79D3B;
+}
+
+.p {
+  font-weight: 200;
+} 
