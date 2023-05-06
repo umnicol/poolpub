@@ -6,6 +6,7 @@ import Header from '<poolpub>/components/Header/Header'
 import HeaderSection from '<poolpub>/components/HeaderSection/HeaderSection'
 import Section from '<poolpub>/components/Section/Section'
 import SectionImage from '<poolpub>/components/SectionImage/SectionImage'
+import Newsletter from '<poolpub>/components/Newsletter/NewsletterForm'
 
 
 
@@ -38,6 +39,9 @@ export default function Home() {
               subtitle="Become a member for only 200KR"
               subtitle2="And get special offers and lower prices"/>
 
+      <Newsletter onSubmit={function (email: string): void {
+        throw new Error('Function not implemented.')
+      } }/>
     </>
 
   
