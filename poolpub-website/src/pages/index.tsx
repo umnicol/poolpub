@@ -8,6 +8,7 @@ import Section from '<poolpub>/components/Section/Section'
 import SectionImage from '<poolpub>/components/SectionImage/SectionImage'
 
 
+
 export default function Home() {
   return (
     <>
@@ -18,9 +19,13 @@ export default function Home() {
       </Head>
 
       <MainHeader/>
+      
+
 
       <Section title={'Our Story'} subtitle={'Get to know us'} text={'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum'}/>
-
+      
+ 
+    
       <HeaderSection image={'/activities-img.png'} 
               title={"Bored? We've got you!"} 
               subtitle="Come play pool or darts, book a five match with your friends or rent a party room"

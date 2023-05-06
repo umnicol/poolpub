@@ -1,4 +1,5 @@
 import react from 'react';
+import Button from '../Button/Button';
 import styles from './HeaderSection.module.css'
 
 interface HeaderSectionProps {
@@ -21,6 +22,10 @@ export default function HeaderSection ({
                 <h4 className={styles.h4}>{subtitle}</h4>
                 <h4 className={styles.h4}>{subtitle2}</h4>
             </div>
+
+            <div className={styles.button_header}>
+               <Button label={"LEARN MORE"}/> 
+              </div>
         </header>
     )
 }
