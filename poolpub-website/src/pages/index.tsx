@@ -37,6 +37,9 @@ export default function Home() {
               title={"Be part of our pool-pub family!"} 
               subtitle="Become a member for only 200KR"
               subtitle2="And get special offers and lower prices"/>
+
     </>
+
+  
   )
 }
