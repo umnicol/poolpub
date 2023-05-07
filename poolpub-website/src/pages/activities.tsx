@@ -1,4 +1,5 @@
 import Header from '<poolpub>/components/Header/Header'
+import TextSection from '<poolpub>/components/TextSection/TextSection'
 import Head from 'next/head'
 
 
@@ -11,6 +12,8 @@ export default function Activities() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Header image={'/activities-img.png'} title={'Activities'}/>
+
+      <TextSection headline={'Pick from our variety of activities'} paragraph={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}/>
     </>
   )
 }

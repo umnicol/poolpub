@@ -1,4 +1,5 @@
 import Header from '<poolpub>/components/Header/Header'
+import TextSection from '<poolpub>/components/TextSection/TextSection'
 import Head from 'next/head'
 
 
@@ -11,6 +12,8 @@ export default function Membership() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Header image={'/activities-img.png'} title={'Membership'}/>
+
+      <TextSection headline={'Become a member of pool-pub family'} paragraph={'Lorem ipsum please we have to write sth in these'}/>
     </>
   )
 }
