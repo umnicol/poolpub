@@ -27,14 +27,14 @@ export default function Home() {
       
  
     
-      <HeaderSection image={'/activities-img.png'} 
+      <HeaderSection image={'/pool-img.png'} 
               title={"Bored? We've got you!"} 
               subtitle="Come play pool or darts, book a five match with your friends or rent a party room"
               subtitle2="We have something for everyone!"/>
 
       <SectionImage subtitle={'Excellent food and drinks'} text={'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum '}/>
       
-      <HeaderSection image={'/activities-img.png'} 
+      <HeaderSection image={'/mainheader-img.png'} 
               title={"Be part of our pool-pub family!"} 
               subtitle="Become a member for only 200KR"
               subtitle2="And get special offers and lower prices"/>
