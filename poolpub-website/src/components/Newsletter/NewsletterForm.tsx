@@ -20,12 +20,12 @@ const Newsletter = ({ onSubmit }: NewsletterProps) => {
   return (
    
       <form className={styles.NewsletterForm} onSubmit={handleSubmit}>
-             <h3 className={styles.Newsletter_h3}>SUBSCRIBE TO OUR NEWSLETTER</h3>  
+             <h3 className={styles.Newsletter_h3}>SIGN UP FOR NEWSLETTER</h3>  
              <label className={styles.NewsletterLabel}>
-                  Email:
-                  <input className={styles.NewsletterInput} type="email" value={email} onChange={handleChange} />
+             Enter your email and be the first one to know about all our events and get new personalized discounts!
+                  <input className={styles.NewsletterInput} type="email" value={email} placeholder={"Your email"}onChange={handleChange} />
               </label>
-              <button className={styles.NewsletterButton} type="submit">Subscribe</button>
+              <button className={styles.NewsletterButton} type="submit">SUBSCRIBE</button>
           </form>
   );
 };
