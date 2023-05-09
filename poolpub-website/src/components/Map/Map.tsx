@@ -8,12 +8,12 @@ interface MapProps {
 
 export default function MapImage({
   
-  image = '/map-img.png',
+  image = '/map-image.png',
 }: MapProps) {
   return (
     <div className={styles.sectionContainer}>
       <div className={styles.sectionImage}>
-        <Image src={image} alt="image of map" className={styles.MapImage} height={450} width={1700} />
+        <Image src={image} alt="image of map" className={styles.MapImage} height={420} width={1500} />
       </div>
     </div>
   );

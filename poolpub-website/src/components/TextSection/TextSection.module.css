@@ -18,5 +18,17 @@
   .paragraph {
     font-size: 18px;
     font-weight: 300;
+    width: 500px;
+  }
+
+  .linebreak {
+    
+      height: 4px;
+      width: 500px;
+      background:#D79D3B ;
+      margin-top: 10px;
+      margin-bottom: 20px;
+  
+  
   }
   

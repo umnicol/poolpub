@@ -16,7 +16,7 @@ export default function Contact() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Header image={'/activities-img.png'} title={'Contact'}/>
-      <TextSection headline={'HAVE A QUESTION? WRITE US!'} paragraph={'Lorem ipsum please we have to write sth in these'}/>
+      <TextSection headline={'ANYTHING ELSE YOU WOULD LIKE TO KNOW?'} paragraph={'Nobody is perfect, nor are we. Therefore, if there is anything we have missed, do not hesitate to write tos us. We will get back to you as soon as possible,promise!'}/>
       <ContactForm/>
       <MapImage/>
       

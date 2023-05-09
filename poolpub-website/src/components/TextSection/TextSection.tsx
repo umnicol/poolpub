@@ -12,7 +12,8 @@ export default function TextSection ({
     return (
         <div className={styles.container}>
         <h2 className={styles.headline}>{headline}</h2>
-        <p className={styles.paragraph}>{paragraph}</p>
+        <div className={styles.linebreak}></div>
+     <p className={styles.paragraph}>{paragraph}</p>
       </div>
     )
 }
