@@ -1,0 +1,14 @@
+.MapContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    margin-left: 200px;
+    margin-right: 200px;
+    justify-content: space-between;
+  } 
+  
+  .MapImage {
+    position: relative;
+    width: 100%;
+    margin-top: 80px;
+  }

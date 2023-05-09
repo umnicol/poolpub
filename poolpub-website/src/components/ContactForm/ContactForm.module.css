@@ -1,0 +1,53 @@
+.ContactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .ContactLabel {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .ContactInput,
+  .ContactText {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none;
+    background-color: black;
+  }
+  
+  .ContactInput:focus,
+  .ContactText:focus {
+    border-color: #D79D3B;
+  }
+  
+  .ContactButton[type="submit"] {
+    display: inline-block;
+    padding: 11px 19px;
+    background-color: #72191A;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase; 
+    margin-top: 30px;
+  }
+  
+  .ContactButton[type="submit"]:hover {
+    background-color: #D79D3B;
+  }
+
+
+  

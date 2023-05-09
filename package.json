@@ -3,6 +3,14 @@
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
     "@mui-treasury/components": "^1.10.1",
-    "@mui/material": "^5.12.3"
+    "@mui/material": "^5.12.3",
+    "google-map-react": "^2.2.0",
+    "leaflet": "^1.9.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/google-map-react": "^2.1.7",
+    "@types/leaflet": "^1.9.3"
   }
 }
