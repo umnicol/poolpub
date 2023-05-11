@@ -13,7 +13,7 @@ const links = [
   { href: "/membership", label: "Membership" },
   { href: "/menu", label: "Menu" },
   { href: "/contact", label: "Contact" },
-  { href: "/book", label: "Book" },
+  { href: "/login", label: "Log In" },
 ];
 
 interface NavBarProps {

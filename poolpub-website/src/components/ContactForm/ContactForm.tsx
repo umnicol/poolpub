@@ -5,31 +5,38 @@ interface ContactFormProps {
   name: string;
   email: string;
   message: string;
+  address1: string;
+  address2: string;
+  phoneNumber: string;
 }
 
 
   export default function ContactForm ({
     name,
     email,
-    message
+    message,
+    address1,
+    address2,
+    phoneNumber
   }: ContactFormProps) {
 
   return (
-          <form className={styles.ContactForm}>
-              <label className={styles.ContactLabel} htmlFor="name">NAME:</label>
-              <input className={styles.ContactInput}
-                  type="text" />
+          <><div className={styles.columnOne}>
+      <form className={styles.ContactForm}>
+        <label className={styles.ContactLabel}>NAME</label>
+        <input className={styles.ContactInput}
+          type="text" />
 
-              <label className={styles.ContactLabel} htmlFor="email">EMAIL:</label>
-              <input className={styles.ContactInput}
-                  type="email" />
+        <label className={styles.ContactLabel}>EMAIL</label>
+        <input className={styles.ContactInput}
+          type="email" />
 
-              <label className={styles.ContactLabel} htmlFor="message">MESSAGE:</label>
-              <textarea className={styles.ContactText}/>
+        <label className={styles.ContactLabel}>MESSAGE</label>
+        <textarea className={styles.ContactText} />
 
-              <button className={styles.ContactButton} type="submit">SUBMIT</button>
-          </form>
-      
+        <button className={styles.ContactButton} type="submit">SUBMIT</button>
+      </form></div>
+      </>
   )
 };
 
