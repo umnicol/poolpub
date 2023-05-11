@@ -18,7 +18,7 @@ const Newsletter = ({ onSubmit }: NewsletterProps) => {
   };
 
   return (
-   
+      <div className={styles.NewsletterContainer}>
       <form className={styles.NewsletterForm} onSubmit={handleSubmit}>
              <h3 className={styles.Newsletter_h3}>SIGN UP FOR NEWSLETTER</h3>  
              <label className={styles.NewsletterLabel}>
@@ -27,6 +27,7 @@ const Newsletter = ({ onSubmit }: NewsletterProps) => {
               </label>
               <button className={styles.NewsletterButton} type="submit">SUBSCRIBE</button>
           </form>
+          </div>
   );
 };
 
