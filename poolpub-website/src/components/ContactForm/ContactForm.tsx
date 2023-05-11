@@ -5,9 +5,7 @@ interface ContactFormProps {
   name: string;
   email: string;
   message: string;
-  address1: string;
-  address2: string;
-  phoneNumber: string;
+ 
 }
 
 
@@ -15,9 +13,7 @@ interface ContactFormProps {
     name,
     email,
     message,
-    address1,
-    address2,
-    phoneNumber
+    
   }: ContactFormProps) {
 
   return (
