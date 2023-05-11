@@ -3,7 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styles from './NavBar.module.css';
 
-interface NavLink {
+
+interface NavLink{
   href: string;
   label: string;
 }
@@ -40,6 +41,7 @@ export default function NavBar({
           </li>
         ))}
       </ul>
+      
     </nav>
   );
 }
