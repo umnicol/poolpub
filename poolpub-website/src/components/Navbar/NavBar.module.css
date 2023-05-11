@@ -22,13 +22,12 @@
   
   .links a {
     text-transform: uppercase;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 19px;
     transition: all 0.3s ease-in-out;
   }
   
   .links a:hover {
     color: #D79D3B;
-    text-decoration: underline;
   }
   

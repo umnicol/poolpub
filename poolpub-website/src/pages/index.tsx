@@ -23,7 +23,7 @@ export default function Home() {
       
 
 
-      <Section title={'Our Story'} subtitle={'Get to know us'} text={'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum'}/>
+      <Section title={'Our Story'} subtitle={'Get to know us'} text={'Founded in 1993, POOL-PUB is already here for nearly 30 years! We offer more than 15 types of beer, 13 pool tables and other activities such as shuffleboard, darts or tabletennis. We are located in the lively neighbourhood of Norrebro and are open everyday. So don not wait and come visit us!'}/>
       
  
     
@@ -32,7 +32,7 @@ export default function Home() {
               subtitle="Come play pool or darts, book a five match with your friends or rent a party room"
               subtitle2="We have something for everyone!"/>
 
-      <SectionImage subtitle={'Excellent food and drinks'} text={'Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum '}/>
+      <SectionImage subtitle={'Excellent food and drinks'} text={'Apart from our variety of activities, you can also enjoy our delicious burgers or try any of our 15 types of beer and cocktails. We have something for evveyrone- just come and try it for yourseelf.'}/>
       
       <HeaderSection image={'/mainheader-img.png'} 
               title={"Be part of our pool-pub family!"} 
