@@ -7,24 +7,15 @@ interface ContactFormProps {
   message: string;
 }
 
- 
 
-const ContactForm = () => {
-  const [formData, setFormData] = useState<ContactFormProps>({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log(formData);
-    // Here we might send form data to the backend or do something else with it
-  };
+  export default function ContactForm ({
+    name,
+    email,
+    message
+  }: ContactFormProps) {
 
   return (
-          <form className={styles.ContactForm} onSubmit={handleSubmit}>
+          <form className={styles.ContactForm}>
               <label className={styles.ContactLabel} htmlFor="name">NAME:</label>
               <input className={styles.ContactInput}
                   type="text" />
@@ -42,4 +33,4 @@ const ContactForm = () => {
   )
 };
 
-export default ContactForm;
+
