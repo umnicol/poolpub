@@ -14,7 +14,7 @@ export default function Activities() {
       </Head>
       <Header image={'/activities-img.png'} title={'Activities'}/>
 
-      <TextSection headline={'Pick from our variety of activities'} paragraph={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}/>
+      <TextSection headline={'Pick from our variety of activities'} paragraph={'We have lots of activities at pool-pub copenhagen! We have 13 pool tables, 1 billard tables, 1 ping pong table, 1 table football, 2 shuffleboard tables, golf, hunting simulator, arcade machines and a huge bar area. We have a venue where there is space for you to throw your own party! You can always contact us with your ideas and we will do everything we can to help.'}/>
    
       <ActivityGrid activities={[
          {
