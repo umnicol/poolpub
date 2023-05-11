@@ -18,7 +18,7 @@ export default function Contact() {
       </Head>
       <Header image={'/activities-img.png'} title={'Contact'}/>
       <TextSection headline={'Anything you would like to know?'} paragraph={'Nobody is perfect, nor are we. Therefore, if there is anything we have missed, do not hesitate to write to us. We will get back to you as soon as possible, promise!'}/>
-      <ContactForm/>
+      <ContactForm name={'NAME'} email={'EMAIL'} message={'MESSAGE'}/>
       <MapImage googleMapsApiKey={googleMapsApiKey}/>
     </>
   )
