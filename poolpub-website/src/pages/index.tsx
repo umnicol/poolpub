@@ -7,6 +7,7 @@ import HeaderSection from '<poolpub>/components/HeaderSection/HeaderSection'
 import Section from '<poolpub>/components/Section/Section'
 import SectionImage from '<poolpub>/components/SectionImage/SectionImage'
 import Newsletter from '<poolpub>/components/Newsletter/NewsletterForm'
+import Button from '<poolpub>/components/Button/Button'
 
 
 
@@ -21,7 +22,7 @@ export default function Home() {
 
       <MainHeader/>
       
-
+  
 
       <Section title={'Our Story'} subtitle={'Get to know us'} text={'Founded in 1993, POOL-PUB is already here for nearly 30 years! We offer more than 15 types of beer, 13 pool tables and other activities such as shuffleboard, darts or tabletennis. We are located in the lively neighbourhood of Norrebro and are open everyday. So don not wait and come visit us!'}/>
       
