@@ -6,8 +6,9 @@ import SectionImage from '<poolpub>/components/SectionImage/SectionImage'
 import TextSection from '<poolpub>/components/TextSection/TextSection'
 import Head from 'next/head'
 
-
 export default function Contact() {
+  const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || '';
+
   return (
     <>
       <Head>
@@ -16,10 +17,9 @@ export default function Contact() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Header image={'/activities-img.png'} title={'Contact'}/>
-      <TextSection headline={'ANYTHING ELSE YOU WOULD LIKE TO KNOW?'} paragraph={'Nobody is perfect, nor are we. Therefore, if there is anything we have missed, do not hesitate to write tos us. We will get back to you as soon as possible,promise!'}/>
+      <TextSection headline={'Anything you would like to know?'} paragraph={'Nobody is perfect, nor are we. Therefore, if there is anything we have missed, do not hesitate to write to us. We will get back to you as soon as possible, promise!'}/>
       <ContactForm/>
-      <MapImage/>
-      
+      <MapImage googleMapsApiKey={googleMapsApiKey}/>
     </>
   )
 }

@@ -1,19 +1,31 @@
 import React from 'react';
-import styles from './Map.module.css'
-import Image from 'next/image';
+import styles from './Map.module.css';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+
+const mapContainerStyle = { height: '420px', width: '100%' };
+const defaultCenter = { lat: 55.708212007801315, lng: 12.522981551714693 };
+const defaultZoom = 17;
+const poolPubLocation = { lat: 55.6783, lng: 12.5796 }; // Pool Pub coordinates
 
 interface MapProps {
-  image?: string;
+  googleMapsApiKey: string;
 }
 
-export default function MapImage({
-  
-  image = '/map-image.png',
-}: MapProps) {
+// ask about the marker 
+
+export default function MapImage({ googleMapsApiKey }: MapProps) {
   return (
     <div className={styles.sectionContainer}>
       <div className={styles.sectionImage}>
-        <Image src={image} alt="image of map" className={styles.MapImage} height={420} width={1500} />
+        <LoadScript googleMapsApiKey={googleMapsApiKey}>
+          <GoogleMap
+            mapContainerStyle={mapContainerStyle}
+            center={defaultCenter}
+            zoom={defaultZoom}
+          >
+            <Marker position={poolPubLocation} /> 
+          </GoogleMap>
+        </LoadScript>
       </div>
     </div>
   );
