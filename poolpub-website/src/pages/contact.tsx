@@ -18,11 +18,7 @@ export default function Contact() {
       </Head>
       <Header image={'/activities-img.png'} title={'Contact'}/>
       <TextSection headline={'Anything you would like to know?'} paragraph={'Nobody is perfect, nor are we. Therefore, if there is anything we have missed, do not hesitate to write to us. We will get back to you as soon as possible, promise!'}/>
-<<<<<<< Updated upstream
-      <ContactForm name={'NAME'} email={'EMAIL'} message={'MESSAGE'}/>
-=======
-      <ContactForm name={''} email={''} message={''} address1={''} address2={''} phoneNumber={''}/>
->>>>>>> Stashed changes
+      <ContactForm/>
       <MapImage googleMapsApiKey={googleMapsApiKey}/>
     </>
   )

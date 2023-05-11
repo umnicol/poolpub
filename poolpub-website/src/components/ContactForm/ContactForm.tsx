@@ -2,9 +2,9 @@ import React, { useState, ChangeEvent, FormEvent } from "react";
 import styles from './ContactForm.module.css'
 
 interface ContactFormProps {
-  name: string;
-  email: string;
-  message: string;
+  name?: string;
+  email?: string;
+  message?: string;
 }
 
 

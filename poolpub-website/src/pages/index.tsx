@@ -9,7 +9,6 @@ import SectionImage from '<poolpub>/components/SectionImage/SectionImage'
 import Newsletter from '<poolpub>/components/Newsletter/NewsletterForm'
 import Button from '<poolpub>/components/Button/Button'
 
-import { signInWithGoogle } from '<poolpub>/firebase'
 // for retrieving data and showcasing them on the profile
 //       <h1>{localStorage.getItem("name")}</h1>
 //       <h1>{localStorage.getItem("email")}</h1>
@@ -23,13 +22,6 @@ export default function Home() {
       </Head>
 
       <MainHeader/>
-<<<<<<< Updated upstream
-      
-  
-=======
-      <button onClick={signInWithGoogle}>Sign In</button>
-
->>>>>>> Stashed changes
 
       <Section title={'Our Story'} subtitle={'Get to know us'} text={'Founded in 1993, POOL-PUB is already here for nearly 30 years! We offer more than 15 types of beer, 13 pool tables and other activities such as shuffleboard, darts or tabletennis. We are located in the lively neighbourhood of Norrebro and are open everyday. So don not wait and come visit us!'}/>
       
