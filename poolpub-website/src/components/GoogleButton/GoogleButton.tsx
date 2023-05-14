@@ -15,7 +15,7 @@ function GoogleLogInButton({
   return (
     <div className={styles.GoogleContainer}>
     <button className={styles.GoogleLogInButton} onClick={signInWithGoogle}>
-    LOG IN
+    Log in with Google
     </button></div>
   );
 }
