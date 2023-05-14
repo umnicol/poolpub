@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, getAuth, signInWithPopup, signOut } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAEDwsTeKCGlhgtFKS4Y7sKjiJdx1p8Ftw",
@@ -26,7 +26,21 @@ export const signInWithGoogle = () => {
 
         localStorage.setItem("name", name)
         localStorage.setItem("email", email)
+
+        window.location.href = "/profile";
     }).catch((error) => {
         console.log(error);
     })
 }
+
+export const logout = () => {
+    signOut(auth)
+      .then(() => {
+        localStorage.clear()
+        // Redirect to the login page
+        window.location.href = "/";
+      })
+      .catch((error) => {
+        console.log("Logout error:", error);
+      });
+  };
