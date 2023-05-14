@@ -1,3 +1,4 @@
+import BookingForm from '<poolpub>/components/BookingForm/BookingForm'
 import FoodMenu from '<poolpub>/components/FoodMenu/FoodMenu'
 import Header from '<poolpub>/components/Header/Header'
 import TextSection from '<poolpub>/components/TextSection/TextSection'
@@ -17,7 +18,6 @@ export default function Menu() {
       <TextSection headline={'Our food and beverages menu'} paragraph={'Lorem ipsum please we have to write sth in these'}/>
      
       <FoodMenu imageFood={'/menu-img.jpg'} imageDrinks={'/drinks-img.jpg'}/>
-
     </>
   )
 }
