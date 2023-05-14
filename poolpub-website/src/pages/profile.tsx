@@ -31,7 +31,6 @@ export default function Profile() {
       </Head>
       <Header image="/activities-img.png" title="My Profile" />
       <ProfileBio />
-      {/* Add other profile sections/components */}
     </>
   );
 }
