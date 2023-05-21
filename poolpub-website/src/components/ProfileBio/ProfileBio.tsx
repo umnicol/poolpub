@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { auth } from '<poolpub>/firebase';
+import Button from '../Button/Button';
 
 export default function ProfileBio() {
   const [user, setUser] = useState({ name: '', email: '' });
@@ -16,10 +17,15 @@ export default function ProfileBio() {
     return () => unsubscribe(); // Cleanup the auth state listener
   }, []);
 
+  const buttonBooking = () => {
+    window.location.href = '/booking.tsx';
+  };
+
   return (
     <div>
       <h2>Welcome, {user.name}!</h2>
       <p>{user.email}</p>
+      <Button label={'+add new'} onClick={buttonBooking}/>
     </div>
   );
 }
