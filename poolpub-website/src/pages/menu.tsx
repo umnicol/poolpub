@@ -18,6 +18,7 @@ export default function Menu() {
       <TextSection headline={'Our food and beverages menu'} paragraph={'Lorem ipsum please we have to write sth in these'}/>
      
       <FoodMenu imageFood={'/menu-img.jpg'} imageDrinks={'/drinks-img.jpg'}/>
+      <BookingForm/>
     </>
   )
 }

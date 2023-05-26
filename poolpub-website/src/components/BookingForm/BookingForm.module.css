@@ -4,6 +4,28 @@
   align-items: center;
 } 
 
+.BookingHeading{
+    font-size: 50px;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.BookingParagraph {
+    font-size: 15px;
+    color: white;
+    font-weight: 200;
+    font-family: 'Oswald', sans-serif;
+    width:600px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .BookingForm{
     display: flex;
     justify-content: center;
@@ -17,7 +39,7 @@
 }
   
 .BookingLabel {
-    font-size: 16px;
+    font-size: 17px;
     margin-top: 10px;
     color: white;
     font-weight: 400;
@@ -35,10 +57,22 @@
     font-size: 1rem;
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
+    background-color: black;
   }
+
+.BookingInput:hover,
+.BookingText:hover {
+    border-color: #D79D3B;
+  }
+
+.BookingInput:focus,
+.BookingText:focus {
+      border-color: #D79D3B;
+    }
 
   .BookingSelect {
     padding: 13px;
+    margin-top: 10px;
     max-width: 1000px;
     width: 545px;
     font-size: 1rem;
@@ -48,15 +82,23 @@
     border:  solid 1px white;
     cursor: default;
     appearance: auto;
+    appearance: none;
+    background-color: black;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23bf1e2e' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
   }
+ 
+  
 
   .BookingButton {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 12px 30px;
     background-color: #72191A;
     color: #fff;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bold;
     text-align: center;
     border: none;
