@@ -1,17 +1,18 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
-import styles from './BookingForm.module.css'
+import styles from './BookingForm.module.css';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 
 interface BookingFormProps {
   name?: string;
   email?: string;
   message?: string;
-  date?: number;
+  date?:  number; // firebase.firestore.Timestamp v fatabaze mi ukazuje timestamp a dava dokopy date + time. tak asi to by sme mohli pouzit
   time?: number;
   people?: number;
   activity?: string;
-  PhoneNumber?: string;
+  phoneNumber?: string;
 }
-
 
   export default function BookingForm ({
     name,
