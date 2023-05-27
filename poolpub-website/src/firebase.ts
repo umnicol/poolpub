@@ -19,11 +19,12 @@ export const auth = getAuth()
 export const db = getFirestore(app);
 
 // Sign in with Google
-const provider = new GoogleAuthProvider()
+export const provider = new GoogleAuthProvider()
 
 export const signInWithGoogle = () => {
     signInWithPopup(auth, provider)
     .then((result) => {
+        const user = result.user;
         const name = result.user.displayName ?? '';
         const email = result.user.email ?? '';
 

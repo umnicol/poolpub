@@ -18,7 +18,7 @@ export default function ProfileBio() {
   }, []);
 
   const buttonBooking = () => {
-    window.location.href = '/booking.tsx';
+    window.location.href = '/booking';
   };
 
   return (
