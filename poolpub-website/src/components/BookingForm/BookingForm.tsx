@@ -21,7 +21,10 @@ export interface BookingFormData {
 }
 
 export default function BookingForm({ onSubmit }: BookingFormProps) {
+  // State to hold the current user
   const [user, setUser] = useState<User | null>(null);
+
+   // State to hold the form data
   const [formData, setFormData] = useState<BookingFormData>({
     userId: "",
     name: "",
@@ -34,6 +37,7 @@ export default function BookingForm({ onSubmit }: BookingFormProps) {
     message: "",
   });
 
+  // useEffect to set the current user when it changes
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setUser(user);
@@ -44,6 +48,7 @@ export default function BookingForm({ onSubmit }: BookingFormProps) {
     };
   }, []);
 
+  // useEffect to update the form data when the user changes
   useEffect(() => {
     if (user) {
       setFormData((prevData) => ({
@@ -55,6 +60,7 @@ export default function BookingForm({ onSubmit }: BookingFormProps) {
     }
   }, [user]);
 
+    // Event handler for input changes
   const handleInputChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
@@ -62,6 +68,7 @@ export default function BookingForm({ onSubmit }: BookingFormProps) {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  // Event handler for form submission
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
