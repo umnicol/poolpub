@@ -1,14 +1,16 @@
 import React, { useEffect, useState, ChangeEvent, FormEvent } from "react";
 import styles from "./BookingForm.module.css";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, doc, updateDoc } from "firebase/firestore";
 import { db, auth } from "<poolpub>/firebase";
 import { User } from "firebase/auth";
 
 interface BookingFormProps {
   onSubmit: (data: BookingFormData) => void;
+  editingBooking?: BookingFormData; // Optional prop to hold the booking being edited
 }
 
 export interface BookingFormData {
+  id: string;
   userId: string;
   name: string;
   email: string;
@@ -20,12 +22,10 @@ export interface BookingFormData {
   message: string;
 }
 
-export default function BookingForm({ onSubmit }: BookingFormProps) {
-  // State to hold the current user
+export default function BookingForm({ onSubmit, editingBooking }: BookingFormProps) {
   const [user, setUser] = useState<User | null>(null);
-
-   // State to hold the form data
   const [formData, setFormData] = useState<BookingFormData>({
+    id: "",
     userId: "",
     name: "",
     email: "",
@@ -37,7 +37,6 @@ export default function BookingForm({ onSubmit }: BookingFormProps) {
     message: "",
   });
 
-  // useEffect to set the current user when it changes
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setUser(user);
@@ -48,7 +47,6 @@ export default function BookingForm({ onSubmit }: BookingFormProps) {
     };
   }, []);
 
-  // useEffect to update the form data when the user changes
   useEffect(() => {
     if (user) {
       setFormData((prevData) => ({
@@ -60,7 +58,12 @@ export default function BookingForm({ onSubmit }: BookingFormProps) {
     }
   }, [user]);
 
-    // Event handler for input changes
+  useEffect(() => {
+    if (editingBooking) {
+      setFormData(editingBooking);
+    }
+  }, [editingBooking]);
+
   const handleInputChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
@@ -68,34 +71,31 @@ export default function BookingForm({ onSubmit }: BookingFormProps) {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  // Event handler for form submission
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-
+  
     try {
-      // Save form data to Firebase
-      const docRef = await addDoc(collection(db, "bookings"), formData);
-      console.log("Document written with ID:", docRef.id);
-
-      // Call the onSubmit prop with the form data
+      if (editingBooking && editingBooking.id) {
+        // Update existing booking in the database
+        const { id, ...bookingData } = formData; // Exclude userId from the update data
+        const bookingRef = doc(db, "bookings", editingBooking.id);
+        await updateDoc(bookingRef, bookingData);
+        console.log("Document updated with ID:", editingBooking.id);
+      } else {
+        // Save new booking to Firebase
+        const docRef = await addDoc(collection(db, "bookings"), formData);
+        console.log("Document written with ID:", docRef.id);
+      }
+  
       onSubmit(formData);
-
-      // Reset the form after successful submission
-      setFormData((prevData) => ({
-        ...prevData,
-        name: "",
-        email: "",
-        phoneNumber: "",
-        activity: "POOL",
-        date: "",
-        time: "",
-        people: 1,
-        message: "",
-      }));
+      window.location.href = "/profile";
+  
     } catch (error) {
-      console.error("Error adding document:", error);
+      console.error("Error adding/updating document:", error);
     }
   };
+  
+  
   
 
   return (

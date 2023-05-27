@@ -1,6 +1,8 @@
 import react from 'react';
 import Button from '../Button/Button';
 import styles from './HeaderSection.module.css'
+import { useRouter } from 'next/router';
+
 
 interface HeaderSectionProps {
     image: string;
@@ -15,6 +17,12 @@ export default function HeaderSection ({
     subtitle,
     subtitle2
 }: HeaderSectionProps) {
+
+    const router = useRouter();
+    const handleClick = () => {
+    router.push('/activities');  
+    };
+
     return (
         <header className={styles.header} style={{ backgroundImage: `url(${image})` }}>
             <div className={styles.titleContainer}>
@@ -24,7 +32,7 @@ export default function HeaderSection ({
             </div>
 
             <div className={styles.button_header}>
-               <Button label={"LEARN MORE"}/> 
+               <Button label={"LEARN MORE"} onClick={handleClick}/> 
               </div>
         </header>
     )

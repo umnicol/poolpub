@@ -39,13 +39,23 @@
   .bookingButton {
     margin-left: 20px;
   }
-
+/*icons*/
   .deleteIcon {
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
   }
 
   .deleteIcon:hover {
+    transform: scale(1.2);
+  }
+
+
+  .editIcon {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .editIcon:hover {
     transform: scale(1.2);
   }
 

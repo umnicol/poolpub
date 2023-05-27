@@ -9,9 +9,6 @@ import SectionImage from '<poolpub>/components/SectionImage/SectionImage'
 import Newsletter from '<poolpub>/components/Newsletter/NewsletterForm'
 import Button from '<poolpub>/components/Button/Button'
 
-// for retrieving data and showcasing them on the profile
-//       <h1>{localStorage.getItem("name")}</h1>
-//       <h1>{localStorage.getItem("email")}</h1>
 export default function Home() {
   return (
     <>
