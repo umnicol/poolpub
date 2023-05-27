@@ -1,3 +1,4 @@
+import BookingsTable from '<poolpub>/components/BookingTable/BookinTable';
 import Header from '<poolpub>/components/Header/Header';
 import ProfileBio from '<poolpub>/components/ProfileBio/ProfileBio';
 import { auth } from '<poolpub>/firebase';
@@ -31,6 +32,7 @@ export default function Profile() {
       </Head>
       <Header image="/activities-img.png" title="My Profile" />
       <ProfileBio />
+      <BookingsTable/>
     </>
   );
 }

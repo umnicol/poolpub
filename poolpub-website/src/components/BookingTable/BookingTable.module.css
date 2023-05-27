@@ -1,0 +1,43 @@
+.bookingTable {
+    width: 55%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+  }
+  
+  .bookingTable th,
+  .bookingTable td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .bookingTable th {
+    background-color: white;
+    color: black;
+  }
+  
+  .bookingTable tbody tr:hover {
+    background-color: #D79D3B;
+  }
+
+
+  .headingContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 430px;
+    margin-left: 430px;
+  }
+  
+  .title {
+    margin-right: auto;
+  }
+  
+  .bookingButton {
+    margin-left: 20px;
+  }
+
+  

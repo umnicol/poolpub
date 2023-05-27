@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { auth } from '<poolpub>/firebase';
-import Button from '../Button/Button';
+import styles from './ProfileBio.module.css';
+
 
 export default function ProfileBio() {
   const [user, setUser] = useState({ name: '', email: '' });
@@ -17,15 +18,10 @@ export default function ProfileBio() {
     return () => unsubscribe(); // Cleanup the auth state listener
   }, []);
 
-  const buttonBooking = () => {
-    window.location.href = '/booking';
-  };
-
   return (
-    <div>
+    <div className={styles.centeredProfile}>
       <h2>Welcome, {user.name}!</h2>
       <p>{user.email}</p>
-      <Button label={'+add new'} onClick={buttonBooking}/>
     </div>
   );
 }
