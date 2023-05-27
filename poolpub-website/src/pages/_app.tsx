@@ -3,10 +3,14 @@ import type { AppProps } from 'next/app';
 import '<poolpub>/styles/globals.css';
 import NavBar from '<poolpub>/components/Navbar/NavBar';
 import Footer from '<poolpub>/components/Footer/Footer';
+import { Provider } from 'react-redux';
+import store from '<poolpub>/redux/store';
+
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
+     <Provider store={store}>
       <NavBar />
       <Component {...pageProps} />
       <Footer openingHours={{    
@@ -21,7 +25,8 @@ export default function App({ Component, pageProps }: AppProps) {
           address1={'Rentemestervej 67'} 
           address2={'2400 København NV'} 
           email={'poolpub@poolpub.dk'} 
-          phoneNumber={'+45 28 89 67 13'} />
+          phoneNumber={'+45 28 89 67 13'} /> 
+          </Provider>
     </>
   );
 }

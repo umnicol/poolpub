@@ -1,31 +1,36 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import styles from './NewsletterForm.module.css'
+import { useDispatch } from 'react-redux';
+import { subscribeToNewsletter } from '<poolpub>/redux/actions';
+import Popup from '../PopUp/PopUp';
 
-interface NewsletterProps {
-  onSubmit: (email: string) => void;
-}
+const Newsletter = () => {
+  const [subscribed, setSubscribed] = useState(false);
+  const dispatch = useDispatch();
 
-const Newsletter = ({ onSubmit }: NewsletterProps) => {
-  const [email, setEmail] = useState('');
-
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setEmail(event.target.value);
+  const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // Prevent the form submission
+    dispatch(subscribeToNewsletter());
+    setSubscribed(true);
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    onSubmit(email);
+  const handleClosePopup = () => {
+    setSubscribed(false);
   };
+
+
 
   return (
       <div className={styles.NewsletterContainer}>
-      <form className={styles.NewsletterForm} onSubmit={handleSubmit}>
+      <form className={styles.NewsletterForm} onSubmit={handleSubscribe}>
              <h3 className={styles.Newsletter_h3}>SIGN UP FOR NEWSLETTER</h3>  
              <label className={styles.NewsletterLabel}>
              Enter your email and be the first one to know about all our events and get special prices!
-                  <input className={styles.NewsletterInput} type="email" value={email} placeholder={"Your email"}onChange={handleChange} />
+                  <input className={styles.NewsletterInput} type="email"  placeholder={"Your email"} />
               </label>
-              <button className={styles.NewsletterButton} type="submit">SUBSCRIBE</button>
+              <button className={styles.NewsletterButton} type="submit">Subscribe</button>
+
+      {subscribed && <Popup onClose={handleClosePopup} />}
           </form>
           </div>
   );

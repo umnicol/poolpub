@@ -22,7 +22,7 @@ export default function Home() {
 
       <Section title={'Our Story'} subtitle={'Get to know us'} text={'Founded in 1993, POOL-PUB is already here for nearly 30 years! We offer more than 15 types of beer, 13 pool tables and other activities such as shuffleboard, darts or tabletennis. We are located in the lively neighbourhood of Norrebro and are open everyday. So don not wait and come visit us!'}/>
       
- 
+  
     
       <HeaderSection image={'/pool-img.png'} 
               title={"Bored? We've got you!"} 
@@ -36,9 +36,7 @@ export default function Home() {
               subtitle="Become a member for only 200KR"
               subtitle2="And get special offers and lower prices"/>
 
-      <Newsletter onSubmit={function (email: string): void {
-        throw new Error('Function not implemented.')
-      } }/>
+      <Newsletter/>
     </>
 
   
