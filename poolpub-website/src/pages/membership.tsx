@@ -16,7 +16,6 @@ export default function Membership() {
 
       <TextSection headline={'Become a member of pool-pub family'} paragraph={'Get a POOL-PUB membership card and become member for life! Every month you will receive around 2-4 messages with special offers or fun events. Some of the offers even cheaper beer or lower price for some of our activities. What is there to think about? You can see for yourself and compare the advantages and disadvantages.'}/>
       <MembershipCards/>
-      <TextSection headline={'How to apply'} paragraph={''}/>
     </>
   )
 }

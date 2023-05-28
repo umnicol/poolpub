@@ -55,7 +55,7 @@ export default function Activities() {
         }
       ]}/>
 
-      <TextSection headline={'Or pick an Event!'} paragraph={'Write sth here '}/>
+      <TextSection headline={'Or pick an Event!'} paragraph={'None of our activities sound good? Are you looking for a fun competition with your friends or a place for your next party? Then we have something for you. All you need to do is book your event through booking form and we will handle the rest! '}/>
       
       <ActivityGrid activities={[
          {
