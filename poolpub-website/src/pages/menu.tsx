@@ -15,7 +15,7 @@ export default function Menu() {
       </Head>
       <Header image={'/activities-img.png'} title={'Menu'}/> 
 
-      <TextSection headline={'Our food and beverages menu'} paragraph={'Lorem ipsum please we have to write sth in these'}/>
+      <TextSection headline={'Our food and beverages menu'} paragraph={'We are not just a bar with pool tables. We offer wide selection of beers, burgers and other smaller snacks that will make your visit even more enjoyable. We change beers and cocktails based on seasonal availability and have special offers and discount to make it the best value for your money. Come and taste it yourself! '}/>
      
       <FoodMenu imageFood={'/menu-img.jpg'} imageDrinks={'/drinks-img.jpg'}/>
 
