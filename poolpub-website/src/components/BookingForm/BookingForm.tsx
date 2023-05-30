@@ -3,6 +3,7 @@ import styles from "./BookingForm.module.css";
 import { collection, addDoc, doc, updateDoc } from "firebase/firestore";
 import { db, auth } from "<poolpub>/firebase";
 import { User } from "firebase/auth";
+import { useRouter } from 'next/router';
 
 interface BookingFormProps {
   onSubmit: (data: BookingFormData) => void;
@@ -71,6 +72,8 @@ export default function BookingForm({ onSubmit, editingBooking }: BookingFormPro
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  const router = useRouter();
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
   
@@ -88,8 +91,7 @@ export default function BookingForm({ onSubmit, editingBooking }: BookingFormPro
       }
   
       onSubmit(formData);
-      window.location.href = "/profile";
-  
+      router.push('/profile');  
     } catch (error) {
       console.error("Error adding/updating document:", error);
     }
