@@ -5,6 +5,8 @@ import Button from "../Button/Button";
 import { RiDeleteBinLine, RiEdit2Line } from 'react-icons/ri';
 import styles from "./BookingTable.module.css";
 import BookingForm, { BookingFormData } from "../BookingForm/BookingForm";
+import { useRouter } from 'next/router';
+
 
 export default function BookingTable() {
   const [bookings, setBookings] = useState<Booking[]>([]);
@@ -113,12 +115,11 @@ export default function BookingTable() {
   };
   
   
-  
-  
-    /* add more buton */
-    const buttonBooking = () => {
-        window.location.href = "/booking";
-      };
+  const router = useRouter();
+  const buttonBooking = () => {
+  router.push('/booking');  
+  };
+
 
   return (
     <div>
