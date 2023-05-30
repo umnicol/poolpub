@@ -16,7 +16,8 @@ describe("PoolPub exam project", () => {
 
    //for testing Contact page
    cy.contains("Contact").click();
-   cy.get("input").should("have.length", 2); 
+   cy.get("input").should("have.length", 2);
+   cy.get("textarea").should("have.length", 1); 
   });
 
    //for testing if button opens a new page
